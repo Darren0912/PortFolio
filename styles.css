@@ -1,0 +1,330 @@
+/* Base Reset */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; /* Adjust based on your navbar height */
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff8ec;
+    color: #4b2e1e;
+    line-height: 1.6;
+  }
+  
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #fcd34d;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #4b2e1e;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #b45309;
+  }
+  hr {
+    border: none;
+    border-top: 2px solid #fcd34d;
+    width: 70%;
+    margin: 40px auto; /* centers the hr with spacing above and below */
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    border-bottom: 2px solid #fcd34d;
+  }
+  header {
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
+    color: #4b2e1e;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  /* Section */
+  .section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #d97706;
+  }
+  
+  /* Projects */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .project-card {
+    background-color: #fef3c7;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Skills */
+  .skill {
+    margin-bottom: 20px;
+  }
+  
+  .skill label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .progress-bar {
+    background-color: #fde68a;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 20px;
+  }
+  
+  .progress-bar div {
+    height: 100%;
+    background-color: #f59e0b;
+    transition: width 1s ease-in-out;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #fcd34d;
+    color: #4b2e1e;
+    margin-top: 60px;
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Add these after the original styles from previous response */
+  
+  .avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 4px solid #fcd34d;
+    object-fit: cover;
+  }
+  
+  .info h1 {
+    font-size: 2.2rem;
+    color: #4b2e1e;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #5c3d1c;
+    font-size: 16px;
+  }
+  
+  /* Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-left {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4b2e1e;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  /* Project Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 30px;
+    max-width: 500px;
+    margin: 100px auto;
+    position: relative;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modal-content a {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  /* Skills update */
+  .skill label span {
+    float: right;
+    color: #9a3412;
+  }
+  
+  /* About with languages */
+  .about-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  
+  .languages {
+    flex: 1;
+  }
+  
+  .about-text {
+    flex: 3;
+  }
+  
+  /* Circular Progress (Languages) */
+  .circle-container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    gap: 20px;
+  }
+  
+  .circle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: none;
+  }
+  
+  .circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+  }
+  
+  .circle svg circle {
+    fill: none;
+    stroke: #e5e7eb;
+    stroke-width: 10;
+    r: 45;
+    cx: 50;
+    cy: 50;
+  }
+  
+  .circle svg .progress {
+    stroke: #facc15;
+    stroke-width: 10;
+    stroke-linecap: round;
+    stroke-dasharray: 282.6; /* 2 * π * 45 */
+    stroke-dashoffset: 282.6;
+    transition: stroke-dashoffset 1s ease;
+  }
+  
+  .circle .label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -75%);
+    font-size: 0.9rem;
+    color: #4b2e1e;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .percent {
+    display: block;
+    font-size: 0.85rem;
+    color: #9a3412;
+  }
+  
+  .resume-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #fcd34d;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  .resume-button:hover {
+    background-color: #fbbf24;
+  }
+  
